@@ -45,8 +45,8 @@ function clear() {
 }
 
 function init() {
-    // clear();
-    // saveState();
+    clear();
+    saveState();
     for (const dataId in data) {
         const t = document.createElement("div");
         t.classList.add("task");
@@ -82,10 +82,10 @@ document.querySelector(".tasks-grids").addEventListener("click", function (event
 
 })
 
-// function saveState(){
-//     localStorage.setItem("tasks", JSON.stringify(data));
+function saveState(){
+    localStorage.setItem("tasks", JSON.stringify(data));
 
-// }
-// if (localStorage.getItem("tasks")) data=JSON.parse(localStorage.getItem("tasks"));
+}
+if (localStorage.getItem("tasks")) data=JSON.parse(localStorage.getItem("tasks"));
 
 init();
