@@ -51,6 +51,7 @@ function init() {
         const t = document.createElement("div");
         t.classList.add("task");
         t.setAttribute("data-id", dataId);
+        t.setAttribute("data-status", data[dataId].status);
 
         const h = document.createElement("h6");
         h.textContent = data[dataId].title;
