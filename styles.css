@@ -1,0 +1,97 @@
+
+.container
+{
+display: flex;
+}
+.tasks-block_new,
+.tasks-block_in-progress,
+.tasks-block_done {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  min-height: 150px; 
+  /* display: flex; */
+}
+
+
+.tasks-block_new::before {
+  content: "New Tasks";
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+.tasks-block_in-progress::before {
+  content: "In Progress";
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #FF9800;
+}
+
+.tasks-block_done::before {
+  content: "Done";
+  display: block;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #2196F3;
+}
+
+
+.task {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s;
+}
+
+.task h6 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.task p {
+  margin: 5px 0 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+
+.task footer {
+  display: flex;
+  gap: 5px;
+}
+
+.task footer span {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.task footer span:hover {
+  background-color: #eee;
+}
+
+
+.task[data-status="new"] {
+  border-color: #4CAF50;
+}
+
+.task[data-status="in progress"] {
+  border-color: #FF9800;
+}
+
+.task[data-status="done"] {
+  border-color: #2196F3;
+  background-color: #E3F2FD;
+}
